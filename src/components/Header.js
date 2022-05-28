@@ -6,7 +6,7 @@ export default function Header(props) {
         <div>
             <header className="main-header">
                 <div>
-                    <a href='#/'>
+                    <a href='#/' style={{textDecoration: "none"}}>
                         <h1>
                             <center>Restoranımıza hoş geldiniz!</center>
                         </h1>

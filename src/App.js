@@ -2,11 +2,13 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Basket from './components/Basket';
 import data from './menu-data/data';
+
 import {useState} from 'react';
 
 function App() {
-
-  const{products} = data;
+ 
+  const{anayemekler,atistirmaliklar,burgerler,caylar,espressolar,filtrekahveler,kahvaltiliklar,
+        kokteyller,makarnalar,menu,mesrubatlar,salatalar,sandvicler,sicakicecekler,sogukkahveler,tatlilar,turkkahveleri} = data;
   const[cartItems, setCartItems] = useState([]);
 
   const onAdd = (product) => {
@@ -43,7 +45,13 @@ function App() {
     <div className="App">
       <Header countCartItems={cartItems.length}></Header>
       <div className="row">
-        <Main onAdd={onAdd} products={products}></Main>
+        <Main onAdd={onAdd} data={data} menu={menu} anayemekler={anayemekler} atistirmaliklar={atistirmaliklar}
+                            burgerler={burgerler} caylar={caylar} espressolar={espressolar} 
+                            filtrekahveler={filtrekahveler} kahvaltiliklar={kahvaltiliklar}
+                            kokteyller={kokteyller} makarnalar={makarnalar} mesrubatlar={mesrubatlar}
+                            salatalar={salatalar} sandvicler={sandvicler} sicakicecekler={sicakicecekler}
+                            sogukkahveler={sogukkahveler} tatlilar={tatlilar} turkkahveleri={turkkahveleri}
+                            cartItems={cartItems}></Main>
         <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
       </div>
     </div>

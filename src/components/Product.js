@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function Product(props) {
 
-    const {product, onAdd} = props;
+    const {product, onAdd} = props; 
 
   return (
-    <div className="product-card">
+    <div>
         <img className="small" src={product.image} alt={product.name} />
-        <h5><center>{product.title}</center></h5>
-        <div><center>{product.price} TL</center></div>
+        <h3>{product.title}{product.categoryName}</h3>
+        <div>{product.price} TL</div>
         <div>
-            <center><button className="add-button" onClick={() => onAdd(product)}>Sepete Ekle</button></center>
-            
+            <div className="about-text">{product.about}</div>
+            <button onClick={() => onAdd(product)}>Sepete Ekle</button>
         </div>
     </div>
   )

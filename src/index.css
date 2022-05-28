@@ -18,9 +18,10 @@ a{
 }
 .row{
   display:grid;
+  width:fit-content;
   grid-template-columns:repeat(4,2fr);
   grid-column-gap: 0px;
-  grid-row-gap: 50px;
+  grid-row-gap: 40px;
   height: auto;
 }
 .col-1{
