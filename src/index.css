@@ -28,6 +28,7 @@ a{
   flex:1;
   min-width: 20rem;
   height: fit-content;
+  
 }
 .col-2{
   flex:2;
@@ -37,6 +38,7 @@ a{
   padding: 1rem;
   margin:0.5rem ;
   border-radius:0.5rem;
+  
 }
 .row.center{
   align-items:center;
@@ -98,6 +100,19 @@ text-right{
 .add-button{
   margin-top: 1rem;
 }
-.product-card{
+.Card{
   margin-left:0.3rem;
+}
+.main-container{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:1rem;
+  width: 65rem;
+}
+
+.main-basket{
+  margin-top:7rem;
+  border: #40c0f0 solid 0.5rem;
 }

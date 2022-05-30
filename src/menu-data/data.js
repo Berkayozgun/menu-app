@@ -137,25 +137,6 @@ import bolognez from "../images/makarnalar/bolognez.jpg";
 import manti from "../images/makarnalar/mantı.jpg";
 import tonbalikli from "../images/makarnalar/tonbalikli.jpg";
 
-/* menu */
-
-import kahvaltilikMenu from "../images/menu/kahvalti-menu.jpg";
-import sandviclerMenu from "../images/menu/sandwich-menu.jpg";
-import atistirmalikMenu from "../images/menu/atistirmalik-menu.jpg";
-import makarnalarMenu from "../images/menu/makarnalar-menu.jpg";
-import salatalarMenu from "../images/menu/salatalar-menu.jpg";
-import burgerMenu from "../images/menu/hamburger-menu.jpg";
-import anayemeklerMenu from "../images/menu/anayemekler-menu.jpg";
-import tatlilarMenu from "../images/menu/tatlilar-menu.jpg";
-import caylarMenu from "../images/menu/caylar-menu.jpg";
-import turkkahveleriMenu from "../images/menu/turkkahveleri-menu.jpg";
-import espressoMenu from "../images/menu/espresso-menu.jpg";
-import filtrekahveMenu from "../images/menu/worldcoffee-menu.jpg";
-import sicakicecekMenu from "../images/menu/sicakicecek-menu.jpg";
-import sogukkahveMenu from "../images/menu/sogukkahveler-menu.jpg";
-import kokteylMenu from "../images/menu/kokteyl-menu.jpg";
-import mesrubatMenu from "../images/menu/mesrubat-menu.jpg";
-
 /* mesrubat */
 
 import icecoco from "../images/mesrubat/ice  coconut.jpg";
@@ -384,7 +365,7 @@ const data = {
     ],
     atistirmaliklar:[
         {
-            "id":"1",
+            "id":"17",
             "title":"Sepet Patates",
             "price":15,
             "about":"", 
@@ -392,7 +373,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"2",
+            "id":"18",
             "title":"Sepet Soğan Halkası",
             "price":15,
             "about":"", 
@@ -400,7 +381,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"3",
+            "id":"19",
             "title":"Kova Patates",
             "price":25,
             "about":"", 
@@ -408,7 +389,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"4",
+            "id":"20",
             "title":"Kova Sosis",
             "price":28,
             "about":"Patates, kızarmış sosis", 
@@ -416,7 +397,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"5",
+            "id":"21",
             "title":"Kova Special",
             "price":28,
             "about":"Patates, sosis, soğan halkası", 
@@ -424,7 +405,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"6",
+            "id":"22",
             "title":"Kova Tavuk",
             "price":35,
             "about":"Özel soslu kemiksiz tavuk parçaları ve patates ile servis edilir.", 
@@ -432,7 +413,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"7",
+            "id":"23",
             "title":"Atıştırmalık Kasa",
             "price":40,
             "about":"Tavuk parçaları, soğan halkası, sosis , patates", 
@@ -440,7 +421,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"8",
+            "id":"24",
             "title":"Tavuk Dürüm",
             "price":32,
             "about":"Patates ile servis edilir.", 
@@ -448,7 +429,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"9",
+            "id":"25",
             "title":"Tavuk Wrap",
             "price":34,
             "about":"Patates ile servis edilir.", 
@@ -456,7 +437,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"10",
+            "id":"26",
             "title":"Köri Wrap",
             "price":34,
             "about":"Patates ile servis edilir.", 
@@ -464,7 +445,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"11",
+            "id":"27",
             "title":"Kaşarlı Köri Wrap",
             "price":34,
             "about":"Patates ile servis edilir.", 
@@ -472,7 +453,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"12",
+            "id":"28",
             "title":"Köfte Dürüm",
             "price":34,
             "about":"Patates ile servis edilir.", 
@@ -480,7 +461,7 @@ const data = {
             "category":"atistirmalik"
         },
         {
-            "id":"13",
+            "id":"29",
             "title":"Köfte Wrap",
             "price":42,
             "about":"Patates ile servis edilir.", 
@@ -490,7 +471,7 @@ const data = {
     ],
     burgerler:[
         {
-            "id":"1",
+            "id":"30",
             "title":"Tavuk Burger",
             "price":34,
             "about":"Patates ile servis edilir.",
@@ -498,7 +479,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"2",
+            "id":"31",
             "title":"Duble Tavuk Burger",
             "price":42,
             "about":"Patates ile servis edilir.",
@@ -506,7 +487,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"3",
+            "id":"32",
             "title":"Taco Tavuk Burger",
             "price":35,
             "about":"Patates ile servis edilir.",
@@ -514,7 +495,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"4",
+            "id":"33",
             "title":"Duble Taco Tavuk Burger",
             "price":45,
             "about":"Patates ile servis edilir.",
@@ -522,7 +503,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"5",
+            "id":"34",
             "title":"Köfte Burger",
             "price":42,
             "about":"Patates ile servis edilir.",
@@ -530,7 +511,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"6",
+            "id":"35",
             "title":"Duble Köfte Burger",
             "price":55,
             "about":"Patates ile servis edilir.",
@@ -538,7 +519,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"7",
+            "id":"36",
             "title":"Taco Köfte Burger",
             "price":44,
             "about":"Patates ile servis edilir.",
@@ -546,7 +527,7 @@ const data = {
             "category":"burger"
         },
         {
-            "id":"8",
+            "id":"37",
             "title":"Duble Taco Köfte Burger",
             "price":58,
             "about":"Patates ile servis edilir.",
@@ -556,7 +537,7 @@ const data = {
     ],
     caylar:[
         {
-            "id":"1",
+            "id":"38",
             "title":"Bardak Çay",
             "price":6,
             "about":"",
@@ -564,7 +545,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"2",
+            "id":"39",
             "title":"Fincan Çay",
             "price":10,
             "about":"",
@@ -572,7 +553,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"3",
+            "id":"40",
             "title":"Kuşburnu Çayı",
             "price":21,
             "about":"",
@@ -580,7 +561,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"4",
+            "id":"41",
             "title":"Ada Çayı",
             "price":21,
             "about":"",
@@ -588,7 +569,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"5",
+            "id":"42",
             "title":"Ihlamur Çayı",
             "price":21,
             "about":"",
@@ -596,7 +577,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"6",
+            "id":"43",
             "title":"Papatya Çayı",
             "price":21,
             "about":"",
@@ -604,7 +585,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"7",
+            "id":"44",
             "title":"Kış Çayı",
             "price":24,
             "about":"",
@@ -612,7 +593,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"8",
+            "id":"45",
             "title":"Yeşil Çay",
             "price":24,
             "about":"",
@@ -620,7 +601,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"9",
+            "id":"46",
             "title":"Nane Limon Çayı",
             "price":20,
             "about":"",
@@ -628,7 +609,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"10",
+            "id":"47",
             "title":"Tropikal Çay",
             "price":22,
             "about":"",
@@ -636,7 +617,7 @@ const data = {
             "category":"cay"
         },
         {
-            "id":"11",
+            "id":"48",
             "title":"Atom Çayı",
             "price":27,
             "about":"Ihlamur, papatya, ada çayı, karabiber, limon, bal, zencefil",
@@ -646,7 +627,7 @@ const data = {
     ],
     espressolar:[
         {
-            "id":"1",
+            "id":"49",
             "title":"Sade Granül Kahve",
             "price":16,
             "about":"",
@@ -654,7 +635,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"2",
+            "id":"50",
             "title":"Sütlü Granül Kahve",
             "price":17,
             "about":"",
@@ -662,7 +643,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"3",
+            "id":"51",
             "title":"Single Espresso",
             "price":15,
             "about":"",
@@ -670,7 +651,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"4",
+            "id":"52",
             "title":"Duble Espresso",
             "price":18,
             "about":"",
@@ -678,7 +659,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"5",
+            "id":"53",
             "title":"Espresso Macchiato",
             "price":18,
             "about":"",
@@ -686,7 +667,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"6",
+            "id":"54",
             "title":"Espresso Conpana",
             "price":18,
             "about":"",
@@ -694,7 +675,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"7",
+            "id":"55",
             "title":"Americano",
             "price":18,
             "about":"",
@@ -702,7 +683,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"8",
+            "id":"56",
             "title":"Latte",
             "price":20,
             "about":"",
@@ -710,7 +691,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"9",
+            "id":"57",
             "title":"Flat White",
             "price":21,
             "about":"",
@@ -718,7 +699,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"10",
+            "id":"58",
             "title":"Coffee Cream",
             "price":20,
             "about":"",
@@ -726,7 +707,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"11",
+            "id": "59",
             "title":"Mocha",
             "price":21,
             "about":"",
@@ -734,7 +715,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"12",
+            "id": "60",
             "title":"White Mocha",
             "price":21,
             "about":"",
@@ -742,7 +723,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"13",
+            "id": "61",
             "title":"Caramel Macchiato",
             "price":21,
             "about":"",
@@ -750,7 +731,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"14",
+            "id":   "62",
             "title":"Coffee Miel",
             "price":21,
             "about":"",
@@ -758,7 +739,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"15",
+            "id":  "63",
             "title":"Chai Tea Latte",
             "price":21,
             "about":"",
@@ -766,7 +747,7 @@ const data = {
             "category":"espresso"
         },
         {
-            "id":"16",
+            "id": "64",
             "title":"Irish Cream Latte",
             "price":25,
             "about":"",
@@ -775,7 +756,7 @@ const data = {
         }
     ],
     filtrekahveler:[{
-        "id":"1",
+        "id": "65",
         "title":"Filtre Kahve",
         "price":18,
         "about":"",
@@ -783,7 +764,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"2",
+        "id": "66", 
         "title":"Misto",
         "price":20,
         "about":"Sütlü",
@@ -791,7 +772,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"3",
+        "id":   "67",
         "title":"Santos",
         "price":20,
         "about":"",
@@ -799,7 +780,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"4",
+        "id":   "68",
         "title":"Yemen",
         "price":20,
         "about":"",
@@ -807,7 +788,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"5",
+        "id"    :"69",
         "title":"Arabica",
         "price":20,
         "about":"",
@@ -815,7 +796,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"6",
+        "id"    :"70",
         "title":"Costa Rico",
         "price":20,
         "about":"",
@@ -823,7 +804,7 @@ const data = {
         "category":"filtrekahve"
     },
     {
-        "id":"7",
+        "id"    :"71",
         "title":"Guatemala",
         "price":20,
         "about":"",
@@ -833,7 +814,7 @@ const data = {
     ],
     kahvaltiliklar:[
         {
-            "id":"1",
+            "id"    :"72",
             "title":"Kahvaltı Tabağı",
             "price":40,
             "about":"Beyaz peynir, kaşar peynir, salam, yeşil zeytin, siyah zeytin, bal, reçel, tereyağı, nutella, haşlanmış yumurta, domates, salatalık, biber.",
@@ -841,7 +822,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"2",
+            "id":   "73",
             "title":"Serpme Kahvaltı",
             "price":100,
             "about":"Beyaz peynir, kaşar peynir, çeçil peynir, salam, ezme, yeşil zeytin, siyah zeytin, bal, reçel, tereyağı, nutella, salata, patates, soğan halkası, sosis, sucuklu yumurta, yumurtalı ekmek, termos çay.",
@@ -849,7 +830,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"3",
+            "id":   "74",
             "title":"Serpme Lüx Kahvaltı",
             "price":140,
             "about":"Beyaz peynir, kaşar peynir, çeçil peynir, cheddar peyniri, ezme, yeşil zeytin, siyah zeytin, bal, reçel, tereyağı, nutella, roka, kavurma, helva, kuru kayısı, ceviz, meyve, soğan halkası, sosis, patates, yumurtalı ekmek, fırın menemen, gözleme, termos çay.",
@@ -857,7 +838,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"4",
+            "id":   "75",
             "title":"Sahanda yumurta",
             "price":15,
             "about":"",
@@ -865,7 +846,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"5",
+            "id":   "76",
             "title":"Sucuklu yumurta",
             "price":17,
             "about":"2 adet yumurta , sucuk, tereyağı , kekik ,pul biber kullanılır.",
@@ -873,7 +854,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"6",
+            "id":   "77",
             "title":"Fırın Menemen",
             "price":24,
             "about":"",
@@ -881,7 +862,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"7",
+            "id"    :"78",
             "title":"Kaşarlı Menemen",
             "price":24,
             "about":"",
@@ -889,7 +870,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"8",
+            "id":"  79",
             "title":"Sucuklu Menemen",
             "price":25,
             "about":"",
@@ -897,7 +878,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"9",
+            "   id":"80",
             "title":"Omlet",
             "price":18,
             "about":"",
@@ -906,7 +887,7 @@ const data = {
     
         },
         {
-            "id":"10",
+            "id ":"81",
             "title":"Kaşarlı Omlet",
             "price":20,
             "about":"",
@@ -914,7 +895,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"11",
+            "id"    :"82",
             "title":"Tortilla Kaşarlı Gözleme",
             "price":25,
             "about":"",
@@ -922,7 +903,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"12",
+            "id ":"83",
             "title":"Tortilla Karışık Gözleme",
             "price":25,
             "about":"",
@@ -930,7 +911,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"13",
+            "id"    :"84",
             "title":"Kahvaltı Tost",
             "price":15,
             "about":"Beyaz peynir, domates",
@@ -938,7 +919,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"14",
+            "id"    :"85",
             "title":"Kaşarlı Tost",
             "price":13,
             "about":"",
@@ -946,7 +927,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"15",
+            "id":   "86",
             "title":"Sucuklu Tost",
             "price":17,
             "about":"",
@@ -955,7 +936,7 @@ const data = {
     
         },
         {
-            "id":"16",
+            "   id":"87",
             "title":"Karışık Tost",
             "price":15,
             "about":"Sucuk, kaşar",
@@ -963,7 +944,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"17",
+            "id ":"88",
             "title":"Kavurma Kaşar Tost",
             "price":20,
             "about":"Kavurma, kaşar",
@@ -971,8 +952,8 @@ const data = {
             "category":"kahvaltilik"
     
         },
-        {
-            "id":"18",
+                {
+            "id ":"89",
             "title":"Jumbo Tost",
             "price":22,
             "about":"Kaşar, sosis, domates, salça, sucuk",
@@ -980,7 +961,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"19",
+            "id ":"90",
             "title":"Bomba Tost",
             "price":23,
             "about":"Kaşar, sosis, domates, patates, salça, sucuk",
@@ -988,7 +969,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"20",
+            "id ":"91",
             "title":"Nutella Tost",
             "price":20,
             "about":"",
@@ -996,7 +977,7 @@ const data = {
             "category":"kahvaltilik"
         },
         {
-            "id":"21",
+            "id ":"92",
             "title":"Special Tost",
             "price":25,
             "about":"Nutella, muz",
@@ -1006,7 +987,7 @@ const data = {
     ],
     kokteyller:[
         {
-            "id":"1",
+            "id":"93",
             "title":"Limonata",
             "price":21,
             "about":"",
@@ -1014,7 +995,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"2",
+            "id":"94",
             "title":"Banacoc",
             "price":24,
             "about":"Muz, hindistan cevizi, süt",
@@ -1022,7 +1003,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"3",
+            "id":"95",
             "title":"Sıkma Portakal",
             "price":23,
             "about":"",
@@ -1030,7 +1011,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"4",
+            "id":"96",
             "title":"Sunset",
             "price":24,
             "about":"Ananas, portakal, nar suyu",
@@ -1038,7 +1019,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"5",
+            "id":"97",
             "title":"Berry",
             "price":24,
             "about":"Yaban mersini, vişne suyu",
@@ -1046,7 +1027,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"6",
+            "   id":"98",
             "title":"Soft Mojito",
             "price":24,
             "about":"",
@@ -1054,7 +1035,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"7",
+            "id":"99",
             "title":"Rengarenk",
             "price":24,
             "about":"",
@@ -1062,7 +1043,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"8",
+            "id":"100",
             "title":"Masmavi",
             "price":24,
             "about":"Turunç, ananas, elma, portakal",
@@ -1070,7 +1051,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"9",
+            "id":"101",
             "title":"Karadut",
             "price":24,
             "about":"Karadut püresi",
@@ -1078,7 +1059,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"10",
+            "id":"102",
             "title":"Sulugöz",
             "price":25,
             "about":"Kivi, ananas, dondurma, limon",
@@ -1086,7 +1067,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"11",
+            "id":"103",
             "title":"Limilim",
             "price":25,
             "about":"Limonata, dondurma, ananas suyu",
@@ -1094,7 +1075,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"12",
+            "id":"104",
             "title":"Tipitip",
             "price":25,
             "about":"Karpuz, kavun, elma suyu, dondurma",
@@ -1102,7 +1083,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"13",
+            "id":"105",
             "title":"Cindy",
             "price":24,
             "about":"Portakal, ananas, vişne suyu",
@@ -1110,7 +1091,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"14",
+            "id":"106",
             "title":"Buz Kivi",
             "price":21,
             "about":"Kivi püresi, ananas suyu",
@@ -1118,7 +1099,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"15",
+            "id":"107",
             "title":"Buz Böğürtlen",
             "price":21,
             "about":"Böğürtlen püresi, vişne suyu",
@@ -1126,7 +1107,7 @@ const data = {
             "category":"kokteyl"
         },
         {
-            "id":"16",
+            "id":"108",
             "title":"Buz Ananas",
             "price":21,
             "about":"Ananas püresi, ananas suyu",
@@ -1136,7 +1117,7 @@ const data = {
     ],
     makarnalar:[
     {
-        "id":"1",
+        "id":"109",
         "title":"Napoliten",
         "price":25,
         "about":"Penne makarna, napoliten sos", 
@@ -1144,7 +1125,7 @@ const data = {
         "category":"makarna"
     },
     {
-        "id":"2",
+        "id":"110",
         "title":"Arabiata",
         "price":28,
         "about":"Penne makarna, acı arabiata sos, jalepon biberi", 
@@ -1152,7 +1133,7 @@ const data = {
         "category":"makarna"
     },
     {
-        "id":"3",
+        "id":"111",
         "title":"Alfredo",
         "price":35,
         "about":"Penne makarna, krema, mantar, tavuk, parmesan", 
@@ -1160,7 +1141,7 @@ const data = {
         "category":"makarna"
     },
     {
-        "id":"4",
+        "id":"112",
         "title":"Bolognez",
         "price":40,
         "about":"Penne makarna, bolognez sos, kıyma", 
@@ -1168,7 +1149,7 @@ const data = {
         "category":"makarna"
     },
     {
-        "id":"5",
+        "id":"113",
         "title":"Ton Balıklı ve Sebzeli",
         "price":35,
         "about":"Penne makarna, kapya biberi, ton balığı", 
@@ -1176,7 +1157,7 @@ const data = {
         "category":"makarna"
     },
     {
-        "id":"6",
+        "id":"114",
         "title":"Mantı",
         "price":35,
         "about":"", 
@@ -1184,107 +1165,9 @@ const data = {
         "category":"makarna"
     }
     ],
-    menu:[
-        {
-            "id":"1",
-            "categoryName":"Kahvaltılık",
-            "image":kahvaltilikMenu,
-            "address":"kahvaltilik"
-        },
-        {
-            "id":"2",
-            "categoryName":"Sandviçler",
-            "image":sandviclerMenu,
-            "address":"sandvicler"
-        },
-        {
-            "id":"3",
-            "categoryName":"Atıştırmalık",
-            "image":atistirmalikMenu,
-            "address":"atistirmalik"
-        },
-        {
-            "id":"4",
-            "categoryName":"Makarnalar",
-            "image":makarnalarMenu,
-            "address":"makarnalar"
-        },
-        {
-            "id":"5",
-            "categoryName":"Salatalar",
-            "image":salatalarMenu,
-            "address":"salatalar"
-        },
-        { 
-            "id":"6",
-            "categoryName":"Burger",
-            "image":burgerMenu,
-            "address":"burger"
-        },
-        { 
-            "id":"7",
-            "categoryName":"Ana Yemekler",
-            "image":anayemeklerMenu,
-            "address":"anayemekler"
-        },
-        {
-            "id":"8",
-            "categoryName":"Tatlılar",
-            "image":tatlilarMenu,
-            "address":"tatlilar"
-        },
-        {
-            "id":"9",
-            "categoryName":"Çaylar",
-            "image":caylarMenu,
-            "address":"caylar"
-        },
-        {
-            "id":"10",
-            "categoryName":"Türk Kahveleri",
-            "image":turkkahveleriMenu,
-            "address":"turkkahveleri"
-        },
-        {
-            "id":"11",
-            "categoryName":"Espresso ve Granül Kahveler",
-            "image":espressoMenu,
-            "address":"espresso"
-        },
-        {
-            "id":"12",
-            "categoryName":"Filtre Kahve ve Dünya Kahveleri",
-            "image":filtrekahveMenu,
-            "address":"filtrekahve"
-        },
-        {
-            "id":"13",
-            "categoryName":"Sıcak Sütlü İçecekler",
-            "image":sicakicecekMenu,
-            "address":"sicakicecek"
-        },
-        {
-            "id":"14",
-            "categoryName":"Soğuk Kahveler",
-            "image":sogukkahveMenu,
-            "address":"sogukkahve"
-        },
-        { 
-            "id":"15",
-            "categoryName":"Kokteyller",
-            "image":kokteylMenu,
-            "address":"kokteyl"
-        },
-        {
-            "id":"16",
-            "categoryName":"Milkshake ve Meşrubatlar",
-            "image":mesrubatMenu,
-            "address":"mesrubatlar"
-        }
-    ],
     mesrubatlar:[
         {
-            "id":"1",
+            "id":"115",
             "title":"Ice Coconut",
             "price":25,
             "about":"",
@@ -1292,7 +1175,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"2",
+            "id":"116",
             "title":"Karamel Milkshake",
             "price":28,
             "about":"",
@@ -1300,7 +1183,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"3",
+            "id":"117",
             "title":"Çikolata Milkshake",
             "price":28,
             "about":"",
@@ -1308,7 +1191,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"4",
+            "id":"118",
             "title":"Muz Milkshake",
             "price":28,
             "about":"",
@@ -1316,7 +1199,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"5",
+            "id":"119",
             "title":"Çilek Milkshake",
             "price":28,
             "about":"",
@@ -1324,7 +1207,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"6",
+            "id":"120",
             "title":"Böğürtlen Milkshake",
             "price":28,
             "about":"",
@@ -1332,7 +1215,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"7",
+            "id":"121",
             "title":"Shake Brownie",
             "price":30,
             "about":"",
@@ -1340,7 +1223,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"8",
+            "id":"122",
             "title":"Su",
             "price":4,
             "about":"",
@@ -1348,7 +1231,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"9",
+            "id":"123",
             "title":"Cam Şişe Su",
             "price":7,
             "about":"",
@@ -1356,7 +1239,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"10",
+            "id":"124",
             "title":"Soda",
             "price":10,
             "about":"",
@@ -1364,7 +1247,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"11",
+            "id":"125",
             "title":"Meyveli Soda",
             "price":10,
             "about":"",
@@ -1372,7 +1255,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"12",
+            "id":"126",
             "title":"Kola",
             "price":12,
             "about":"",
@@ -1380,7 +1263,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"13",
+            "id":"127",
             "title":"Sprite",
             "price":12,
             "about":"",
@@ -1388,7 +1271,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"14",
+            "id":"128",
             "title":"Churchill",
             "price":14,
             "about":"",
@@ -1396,7 +1279,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"15",
+            "id":"129",
             "title":"Fanta",
             "price":12,
             "about":"",
@@ -1404,7 +1287,7 @@ const data = {
             "category":"mesrubat"
         },
         {
-            "id":"16",
+            "id":"130",
             "title":"Ice Tea",
             "price":12,
             "about":"",
@@ -1414,7 +1297,7 @@ const data = {
     ],
     salatalar:[
         {
-            "id":"1",
+            "id":"131",
             "title":"Yeşillik Salata",
             "price":24,
             "about":"Kıvırcık, atom, roka, nane, cherry domates",
@@ -1422,7 +1305,7 @@ const data = {
             "category":"salata"
         },
         {
-            "id":"2",
+            "id":"132",
             "title":"Peynirli Salata",
             "price":30,
             "about":"Kıvırcık, domates, salatalık, çeçil peynir, beyaz peynir, kaşar peynir, cheddar peynir",
@@ -1430,7 +1313,7 @@ const data = {
             "category":"salata"
         },
         {
-            "id":"3",
+            "id":"133",
             "title":"Tavuklu Salata",
             "price":36,
             "about":"Kıvırcık, roka, tavuk, cherry domates, mısır",
@@ -1438,7 +1321,7 @@ const data = {
             "category":"salata"
         },
         {
-            "id":"4",
+            "id":"134",
             "title":"Ton Balıklı Salata",
             "price":37,
             "about":"Kıvırcık , roka, nane, domates, mısır, ton balığı",
@@ -1446,7 +1329,7 @@ const data = {
             "category":"salata"
         },
         {
-            "id":"5",
+            "id":"135",
             "title":"Çıtır Tavuk Salata",
             "price":38,
             "about":"Kıvırcık , domates, çıtır paneli kemiksiz tavuk parçaları, mısır",
@@ -1456,7 +1339,7 @@ const data = {
     ],
     sandvicler:[
         {
-            "id":"1",
+            "id":"136",
             "title":"Kahvaltı Sandviç",
             "price":17,
             "about":"Kıvırcık, salatalık, domates, beyaz peynir", 
@@ -1464,7 +1347,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"2",
+            "id":"137",
             "title":"Karışık Sandviç",
             "price":25,
             "about":"Kıvırcık, domates, salatalık, salam, kaşar, beyaz peynir, mısır",  
@@ -1472,7 +1355,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"3",
+            "id":"138",
             "title":"Kavurmalı Sandviç",
             "price":30,
             "about":"Kıvırcık, domates, beyaz peynir, kavurma", 
@@ -1480,7 +1363,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"4",
+            "id":"139",
             "title":"Tavuklu Sandviç",
             "price":28,
             "about":"Kıvırcık, domates, ızgara tavuk, patates", 
@@ -1488,7 +1371,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"5",
+            "id":"140",
             "title":"Ton Balıklı Sandviç",
             "price":28,
             "about":"Kıvırcık, domates, salatalık, ton balığı, mısır", 
@@ -1496,7 +1379,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"6",
+            "id":"141",
             "title":"Köfte Sandviç",
             "price":30,
             "about":"Kıvırcık, domates, köfte", 
@@ -1504,7 +1387,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"7",
+            "id":"142",
             "title":"Patso",
             "price":15,
             "about":"", 
@@ -1512,7 +1395,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"8",
+            "id":"143",
             "title":"Sosisli Patso",
             "price":18,
             "about":"", 
@@ -1520,7 +1403,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"9",
+            "id":"144",
             "title":"Sosisli Sandviç",
             "price":21,
             "about":"", 
@@ -1528,7 +1411,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"10",
+            "id":"145",
             "title":"Kumru",
             "price":20,
             "about":"Sucuk, salam, sosis, kaşar", 
@@ -1536,7 +1419,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"11",
+            "id":"146",
             "title":"Tavuklu Meksika Sandviç",
             "price":25,
             "about":"Kıvırcık, domates, ızgara tavuk", 
@@ -1544,7 +1427,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"12",
+            "id":"147",
             "title":"Tavuklu Barbekü Sandviç",
             "price":25,
             "about":"", 
@@ -1552,7 +1435,7 @@ const data = {
             "category":"sandvic"
         },
         {
-            "id":"13",
+            "id":"148",
             "title":"Tavuklu Soya  Sandviç",
             "price":25,
             "about":"", 
@@ -1562,7 +1445,7 @@ const data = {
     ],
     sicakicecekler:[
         {
-            "id":"1",
+            "id":"149",
             "title":"Sıcak Süt",
             "price":12,
             "about":"",
@@ -1570,7 +1453,7 @@ const data = {
             "category":"sicakicecek"
         },
         {
-            "id":"2",
+            "id":"150",
             "title":"Çilekli Süt",
             "price":15,
             "about":"",
@@ -1578,7 +1461,7 @@ const data = {
             "category":"sicakicecek"
         },
         {
-            "id":"3",
+            "id":"151",
             "title":"Muzlu Süt",
             "price":15,
             "about":"",
@@ -1586,7 +1469,7 @@ const data = {
             "category":"sicakicecek"
         },
         {
-            "id":"4",
+            "id":"152",
             "title":"Ballı Süt",
             "price":17,
             "about":"",
@@ -1594,7 +1477,7 @@ const data = {
             "category":"sicakicecek"
         },
         {
-            "id":"5",
+            "id":"153",
             "title":"Tahinli Süt",
             "price":18,
             "about":"",
@@ -1602,56 +1485,56 @@ const data = {
             "category":"sicakicecek"
         },
         {
-            "id":"6",
+            "id":"154",
             "title":"Sıcak Çikolata",
             "price":20,
             "about":"",
             "image":sicakCiko,
             "category":"sicakicecek"
         },{
-            "id":"7",
+            "id":"155",
             "title":"Sıcak Beyaz Çikolata",
             "price":20,
             "about":"",
             "image":beyazCiko,
             "category":"sicakicecek"
         },{
-            "id":"8",
+            "id":"156",
             "title":"Sıcak Ruby Çikolata",
             "price":20,
             "about":"",
             "image":rubyCiko,
             "category":"sicakicecek"
         },{
-            "id":"9",
+            "id":"157",
             "title":"Salep",
             "price":20,
             "about":"",
             "image":salep,
             "category":"sicakicecek"
         },{
-            "id":"10",
+            "id":"158",
             "title":"Çikolatalı Salep",
             "price":20,
             "about":"",
             "image":cikoSalep,
             "category":"sicakicecek"
         },{
-            "id":"11",
+            "id":"159",
             "title":"Coconut",
             "price":20,
             "about":"",
             "image":coconut2,
             "category":"sicakicecek"
         },{
-            "id":"12",
+            "id":"160",
             "title":"Bisküvi",
             "price":20,
             "about":"",
             "image":hotBisk,
             "category":"sicakicecek"
         },{
-            "id":"13",
+            "id":"161",
             "title":"Ruby Bisküvi",
             "price":20,
             "about":"",
@@ -1661,7 +1544,7 @@ const data = {
     ],
     sogukkahveler:[
         {
-            "id":"1",
+            "id":"162",
             "title":"Affogato",
             "price":20,
             "about":"",
@@ -1669,7 +1552,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"2",
+            "id":"163",
             "title":"Buzlu Filtre Kahve",
             "price":20,
             "about":"",
@@ -1677,7 +1560,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"3",
+            "id":"164",
             "title":"Buzlu Americano",
             "price":20,
             "about":"",
@@ -1685,7 +1568,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"4",
+            "id":"165",
             "title":"Buzlu Türk Kahvesi",
             "price":20,
             "about":"",
@@ -1693,7 +1576,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"5",
+            "id":"166",
             "title":"Buzlu Granül Kahve",
             "price":20,
             "about":"",
@@ -1701,7 +1584,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"6",
+            "id":"167",
             "title":"Dalgona Coffee",
             "price":20,
             "about":"Süt üzerine çırpılmış kahve kreması ile servis edilir.",
@@ -1709,7 +1592,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"7",
+            "id":"168",
             "title":"Buzlu Sütlü Granül Kahve",
             "price":22,
             "about":"",
@@ -1717,7 +1600,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"8",
+            "id":"169",
             "title":"Buzlu Latte",
             "price":22,
             "about":"",
@@ -1725,7 +1608,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"9",
+            "id":"170",
             "title":"Buzlu Mocha",
             "price":22,
             "about":"",
@@ -1733,7 +1616,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"10",
+            "id":"171",
             "title":"Buzlu White Mocha",
             "price":22,
             "about":"",
@@ -1741,7 +1624,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"11",
+            "id":"172",
             "title":"Buzlu Macchiato",
             "price":22,
             "about":"",
@@ -1749,7 +1632,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"12",
+            "id":"173",
             "title":"Frappe",
             "price":23,
             "about":"",
@@ -1757,7 +1640,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"13",
+            "id":"174",
             "title":"Frappucino",
             "price":24,
             "about":"Çikolata, karamel, fındık seçenekleri vardır.",
@@ -1765,7 +1648,7 @@ const data = {
             "category":"sogukkahve"
         },
         {
-            "id":"14",
+            "id":"175",
             "title":"Dondurmalı Frappucino",
             "price":25,
             "about":"Karamelli Dondurma",
@@ -1775,7 +1658,7 @@ const data = {
     ],
     tatlilar:[
         {
-            "id":"1",
+            "id":"176",
             "title":"Sufle",
             "price":23,
             "about":"",
@@ -1783,7 +1666,7 @@ const data = {
             "category":"tatli"
         },
         {
-            "id":"2",
+            "id":"177",
             "title":"Dondurmalı Sufle",
             "price":25,
             "about":"",
@@ -1791,7 +1674,7 @@ const data = {
             "category":"tatli"
         },
         {
-            "id":"3",
+            "id":"178",
             "title":"Günlük Meyveli Cup",
             "price":20,
             "about":"",
@@ -1799,7 +1682,7 @@ const data = {
             "category":"tatli"
         },
         {
-            "id":"4",
+            "id":"179",
             "title":"Çikolatalı Krep",
             "price":15,
             "about":"",
@@ -1807,7 +1690,7 @@ const data = {
             "category":"tatli"
         },
         {
-            "id":"5",
+            "id":"180",
             "title":"Meyveli Krep",
             "price":17,
             "about":"",
@@ -1817,7 +1700,7 @@ const data = {
     ],
     turkkahveleri:[
         {
-            "id":"1",
+            "id":"181",
             "title":"Türk Kahvesi",
             "price":14,
             "about":"",
@@ -1825,7 +1708,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"2",
+            "id":"182",
             "title":"Aromalı Türk Kahvesi",
             "price":15,
             "about":"Fındık, karamel, çikolata, muz, kavun, beyaz çikolata, ruby çikolata",
@@ -1833,7 +1716,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"3",
+            "id":"183",
             "title":"Damla Sakızlı Türk Kahvesi",
             "price":15,
             "about":"",
@@ -1841,7 +1724,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"4",
+            "id":"184",
             "title":"Sütlü Türk Kahvesi",
             "price":15,
             "about":"",
@@ -1849,7 +1732,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"5",
+            "id":"185",
             "title":"Dibek Kahvesi",
             "price":17,
             "about":"",
@@ -1857,7 +1740,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"8",
+            "id":"186",
             "title":"Sütlü Tahinli Türk Kahvesi",
             "price":17,
             "about":"",
@@ -1865,7 +1748,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"9",
+            "id":"187",
             "title":"Menengiç Kahvesi",
             "price":18,
             "about":"Süt ile pişirilmektedir.",
@@ -1873,7 +1756,7 @@ const data = {
             "category":"turkkahve"
         },
         {
-            "id":"10",
+            "id":"188",
             "title":"Osmanlı Kahvesi",
             "price":18,
             "about":"",
