@@ -16,20 +16,22 @@ export default function Header(props) {
 
       <AppBar position="static" sx={{ backgroundColor:"#8F8AC0", width: "100%"}}>
 
-        <Toolbar>
+        <Toolbar sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+
+        <IconButton size="large" color="inherit" href="/" sx={{ justifyContent: "flex-start",}}>
+            <HomeIcon />
+          </IconButton>
 
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
           >
-            Restoranımıza hoş geldiniz!
+           <center>Restoranımıza hoş geldiniz!</center> 
           </Typography>
 
-          <IconButton size="large" color="inherit" href="/">
-            <HomeIcon />
-          </IconButton>
+         
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
 

@@ -105,7 +105,11 @@ export default function Main(props) {
             style={{ fontWeight: "bold",
                     backgroundColor: "#F62F63",
                     marginTop: "1rem", 
-                    borderRadius: "3rem",}}
+                    borderRadius: "3rem",
+                    width:"137%",
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",}}
            indicatorColor="white"
           >
             <Tab label="Ana Yemek" {...a11yProps(0)} style={tabStyle} />
