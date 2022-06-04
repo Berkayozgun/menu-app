@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-
 export default function Basket(props) {
 
   const [open, setOpen] = React.useState(false);
@@ -30,8 +29,8 @@ export default function Basket(props) {
   const totalPrice = itemsPrice + shippingPrice;
 
   return (
-    <aside className="main-basket">
-      <h2>Sepetiniz</h2>
+    <div className="block col-1">
+      <h2><center>Sepetiniz</center></h2>
       <div>{cartItems.length === 0 && <div>Sepetinize henüz ekleme yapmadınız.</div>}</div>
       {cartItems.map((item) => (
         <div key={item.id} className="row">
@@ -44,7 +43,7 @@ export default function Basket(props) {
               -
             </button>
           </div>
-          <div>
+          <div className="col-2">
             {item.qty} adet {item.title} {item.price.toFixed(2)} TL
           </div>
         </div>
@@ -52,7 +51,7 @@ export default function Basket(props) {
       {cartItems.length !== 0 && (
         <div>
           <hr></hr>
-          <div className="row">
+          <div className="row" >
             <div className="col-2">Sepet Tutarı</div>
             <div className="col-1">{itemsPrice.toFixed(2)} TL</div>
           </div>
@@ -62,8 +61,8 @@ export default function Basket(props) {
             <div className="col-1">{shippingPrice.toFixed(2)} TL</div>
           </div>
 
-          <div className="row">
-            <div className="col-2">
+          <div >
+            <div className="row">
               <strong>Toplam Tutar</strong>
             </div>
             <div className="col-1">{totalPrice.toFixed(2)} TL</div>
@@ -97,8 +96,8 @@ export default function Basket(props) {
 
           <select name="cars" id="cars">
             <option value="Ödeme yöntemi">Ödeme Yöntemi</option>
-            <option value="mercedes">Pos cihazı</option>
-            <option value="audi">Nakit</option>
+            <option value="Pos Cihazı">Pos cihazı</option>
+            <option value="Nakit">Nakit</option>
           </select>
 
           <div className="row">
@@ -128,6 +127,6 @@ export default function Basket(props) {
         </div>
       )}
     
-    </aside>
+    </div>
   );
 }

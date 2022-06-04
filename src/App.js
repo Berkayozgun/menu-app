@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import Basket from "./components/Basket";
 import data from "./menu-data/data";
 import { SnackbarProvider } from "notistack";
-import Slide from "@material-ui/core/Slide";
+
 
 import { useState } from "react";
 
@@ -61,37 +61,39 @@ function App() {
       anchorOrigin={{
         vertical: "bottom",
         horizontal: "right",
-        variant: 'success',
+        variant: "success",
       }}
-      TransitionComponent={Slide}
+      
     >
+      <Header className="App-header" countCartItems={cartItems.length}></Header>
+     
       <div className="App">
-        <Header countCartItems={cartItems.length}></Header>
-
-        <div className="row">
-          <Main
-            onAdd={onAdd}
-            data={data}
-            menu={menu}
-            anayemekler={anayemekler}
-            atistirmaliklar={atistirmaliklar}
-            burgerler={burgerler}
-            caylar={caylar}
-            espressolar={espressolar}
-            filtrekahveler={filtrekahveler}
-            kahvaltiliklar={kahvaltiliklar}
-            kokteyller={kokteyller}
-            makarnalar={makarnalar}
-            mesrubatlar={mesrubatlar}
-            salatalar={salatalar}
-            sandvicler={sandvicler}
-            sicakicecekler={sicakicecekler}
-            sogukkahveler={sogukkahveler}
-            tatlilar={tatlilar}
-            turkkahveleri={turkkahveleri}
-            cartItems={cartItems}
-          ></Main>
-          <Basket
+        <div className="app-container">
+        <Main
+        onAdd={onAdd}
+        data={data}
+        menu={menu}
+        anayemekler={anayemekler}
+        atistirmaliklar={atistirmaliklar}
+        burgerler={burgerler}
+        caylar={caylar}
+        espressolar={espressolar}
+        filtrekahveler={filtrekahveler}
+        kahvaltiliklar={kahvaltiliklar}
+        kokteyller={kokteyller}
+        makarnalar={makarnalar}
+        mesrubatlar={mesrubatlar}
+        salatalar={salatalar}
+        sandvicler={sandvicler}
+        sicakicecekler={sicakicecekler}
+        sogukkahveler={sogukkahveler}
+        tatlilar={tatlilar}
+        turkkahveleri={turkkahveleri}
+        cartItems={cartItems}
+      >
+        
+      </Main>
+      <Basket
             onAdd={onAdd}
             onRemove={onRemove}
             cartItems={cartItems}
