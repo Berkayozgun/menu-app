@@ -382,11 +382,13 @@ export default function Main(props) {
               </h2>
               <div className="row">
                 {sandvicler.map((product) => (
+                  <Paper elevation={10} >
                   <Product
                     key={product.id}
                     product={product}
                     onAdd={onAdd}
-                  ></Product>
+                  />
+                  </Paper>
                 ))}
               </div>
             </main>
@@ -399,11 +401,13 @@ export default function Main(props) {
               </h2>
               <div className="row">
                 {tatlilar.map((product) => (
+                  <Paper elevation={10} >
                   <Product
                     key={product.id}
                     product={product}
                     onAdd={onAdd}
-                  ></Product>
+                  />
+                  </Paper>
                 ))}
               </div>
             </main>
