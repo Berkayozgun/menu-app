@@ -125,7 +125,7 @@ export default function Main(props) {
           </Tabs>
         </Box>
 
-        <div className="block col-2">
+        <Paper className="block col-2 main-menu">
           
           <TabPanel name="anayemekler" value={value} index={0}>
           
@@ -416,7 +416,7 @@ export default function Main(props) {
               </div>
             </main>
           </TabPanel>
-        </div>
+        </Paper>
       </Box>
     </div>
   );

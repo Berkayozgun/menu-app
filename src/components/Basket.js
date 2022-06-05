@@ -9,6 +9,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
+import RemoveIcon from "@mui/icons-material/Remove";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Divider from '@mui/material/Divider';
 
 export default function Basket(props) {
   const [open, setOpen] = React.useState(false);
@@ -46,7 +52,7 @@ export default function Basket(props) {
   const totalPrice = itemsPrice + shippingPrice;
 
   return (
-    <div className="basket-body">
+    <Paper className="basket-body">
       <h2>
         <center>Sepetiniz</center>
       </h2>
@@ -56,78 +62,99 @@ export default function Basket(props) {
         )}
       </div>
       {cartItems.map((item) => (
-        <div key={item.id} className="row">
-          <div className="col-2">{item.name}</div>
+        <Paper
+          elevation={10}
+          sx={{ margin: "10px" , padding: "10px" }}
+          key={item.id}
+          className="row"
+        >
           <div className="col-2">
-            <button onClick={() => onAdd(item)} className="add">
-              +
-            </button>
-            <button onClick={() => onRemove(item)} className="remove">
-              -
-            </button>
+            <div className="col-2">
+             {item.title}
+            </div>
           </div>
-          <div className="col-2">
-            {item.qty} adet {item.title} {item.price.toFixed(2)} TL
+          <div>
+          
+            <ButtonGroup sx={{marginLeft:"50%"}} variant="outlined" aria-label="outlined button group">
+
+              <Button onClick={() => onRemove(item)} className="remove">-</Button>
+              <Button className="qty">{item.qty}</Button>
+              <Button onClick={() => onAdd(item)} className="add">+</Button>
+
+            </ButtonGroup>
+
           </div>
-        </div>
+        </Paper>
+        
       ))}
       {cartItems.length !== 0 && (
-        <div>
-          <hr></hr>
-          <div className="row">
-            <div className="col-2">Sepet Tutarı</div>
-            <div className="col-1">{itemsPrice.toFixed(2)} TL</div>
+        <div sx={{ marginTop:"15rem"}}>
+          
+          <Paper sx={{ marginTop: "3rem" , marginLeft: "1rem", marginBottom:"2rem"}} elevation={0}>
+          <div className="basket-row">
+            <div className="col-2 sepet-text" >Sepet Tutarı</div>
+            <div className="col-1 price-text">{itemsPrice.toFixed(2)} TL</div>
           </div>
+          
+          <Divider />
+          </Paper>
 
-          <div className="row">
-            <div className="col-2">Teslimat Ücreti</div>
-            <div className="col-1">{shippingPrice.toFixed(2)} TL</div>
+          <Paper sx={{ marginTop: "2rem" , marginLeft: "1rem" ,marginBottom:"1rem"}} elevation={0}>
+          <div className="basket-row">
+            <div className="col-2 sepet-text" >Teslimat Ücreti</div>
+            <div className="col-1 price-text">{shippingPrice.toFixed(2)} TL</div>
           </div>
+          </Paper>
 
-          <div>
-            <div className="row">
+          <Divider />
+
+          <Paper sx={{ marginTop: "2rem" , marginLeft: "1rem" ,marginBottom:"1rem"}} elevation={0}>
+          <div className="basket-row">
+            <div className="col-2 sepet-text">
               <strong>Toplam Tutar</strong>
             </div>
-            <div className="col-1">{totalPrice.toFixed(2)} TL</div>
+            <div className="col-1 price-text">{totalPrice.toFixed(2)} TL</div>
           </div>
+          </Paper>
 
-          
-        <TextField
-          label="İsminiz"
-          id="outlined-size-small"
-          size="small"
-          sx={{ marginTop:"1rem" }}
-          type="string"
-        />
-      
-        <TextField
-          label="E-mail"
-          id="outlined-size-small"
-          size="small"
-          sx={{ marginTop:"1rem" }}
-          type="email"
-        />
-      
-      <TextField
-          label="Telefon"
-          id="outlined-size-small"
-          size="small"
-          sx={{ marginTop:"1rem" }}
-          type="tel"
-        />
           <TextField
-          label="Adresiniz"
-          id="outlined-size-small"
-          size="small"
-          sx={{ marginTop:"1rem" }}
-          type="address"
-        />
+            label="İsminiz"
+            id="outlined-size-small"
+            size="small"
+            sx={{ marginTop: "1rem" }}
+            type="string"
+          />
 
-          <Box sx={{ width:"11rem", height:"5rem",marginTop:"1rem"}}>
-            <FormControl fullWidth >
-              <InputLabel id="demo-simple-select-label">Ödeme Yöntemi</InputLabel>
+          <TextField
+            label="E-mail"
+            id="outlined-size-small"
+            size="small"
+            sx={{ marginTop: "1rem" }}
+            type="email"
+          />
+
+          <TextField
+            label="Telefon"
+            id="outlined-size-small"
+            size="small"
+            sx={{ marginTop: "1rem" }}
+            type="tel"
+          />
+          <TextField
+            label="Adresiniz"
+            id="outlined-size-small"
+            size="small"
+            sx={{ marginTop: "1rem" }}
+            type="address"
+          />
+
+          <Box sx={{ width: "11rem", height: "5rem", marginTop: "1rem" }}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">
+                Ödeme Yöntemi
+              </InputLabel>
               <Select
-              sx={{ height:"3rem"}}
+                sx={{ height: "3rem" }}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Age"
@@ -141,7 +168,7 @@ export default function Basket(props) {
 
           <div className="row">
             <Button
-            sx={{ width:"11rem", height:"2.5rem"}}
+              sx={{ width: "11rem", height: "2.5rem" }}
               theme={theme}
               color="primary"
               variant="contained"
@@ -169,6 +196,6 @@ export default function Basket(props) {
           </div>
         </div>
       )}
-    </div>
+    </Paper>
   );
 }

@@ -1,6 +1,6 @@
 body {
   font-family: 'Helvetica';
-  background-color: #171435}
+  background-color: #f1f1f1}
 h1,
 h2,
 h3 {
@@ -22,6 +22,12 @@ a{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+}
+.basket-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+  width: 100%;
 }
 
 
@@ -67,12 +73,16 @@ button{
   cursor: pointer;
 }
 button.add{
-  background-color: #40c0f0;
+  background-color: #5D3EBC;
   width: 1.5rem;
+  color: #fff;
+  fontWeight: bold;
 }
 button.remove{
-  background-color: #f04040;
+  background-color: #5D3EBC;
   width: 1.5rem;
+  color: #fff;
+  font-weight: bold;
 }
 button.badge{
   background-color: #f04040;
@@ -80,10 +90,8 @@ button.badge{
   color:#ffffff;
   width: 1.5rem;
 }
-button.checkout{
-  background-color: #40c0f0;
-  width: 100%;
-  justify-content: flex-end;
+button.qty{
+  color: #000000;
 }
 text-right{
   text-align:right;
@@ -137,4 +145,15 @@ text-right{
   margin-top:1rem;
   width: 20rem;
   margin:auto
+}
+.main-menu{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:1rem;
+  width: 95%;
+}
+.price-text{
+  margin-left:3rem;
 }
