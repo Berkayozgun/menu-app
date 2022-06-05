@@ -8,26 +8,41 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import { useState, useEffect } from "react";
 
 function App() {
-  const { anayemekler, atistirmaliklar, burgerler, caylar, espressolar, filtrekahveler,
-          kahvaltiliklar, kokteyller, makarnalar, menu, mesrubatlar, salatalar, sandvicler,
-          sicakicecekler, sogukkahveler, tatlilar, turkkahveleri
-
-        } = data;
+  const {
+    anayemekler,
+    atistirmaliklar,
+    burgerler,
+    caylar,
+    espressolar,
+    filtrekahveler,
+    kahvaltiliklar,
+    kokteyller,
+    makarnalar,
+    menu,
+    mesrubatlar,
+    salatalar,
+    sandvicler,
+    sicakicecekler,
+    sogukkahveler,
+    tatlilar,
+    turkkahveleri,
+  } = data;
 
   const [cartItems, setCartItems] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { 
-      setTimeout(() => { 
-        setIsLoading(false)}, 2000); },
-   []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
 
   const override = {
-    display:"block",
-    margin:"0 auto",
+    display: "block",
+    margin: "0 auto",
     borderColor: "red",
-    marginTop:"20%"
+    marginTop: "20%",
   };
 
   const onAdd = (product) => {
@@ -68,7 +83,7 @@ function App() {
       alignItems={"center"}
       display={"flex"}
     />
-    ) : (
+  ) : (
     <SnackbarProvider
       maxSnack={1}
       anchorOrigin={{
@@ -77,7 +92,7 @@ function App() {
         variant: "success",
       }}
     >
-    <Header className="App-header" countCartItems={cartItems.length}></Header>
+      <Header className="App-header" countCartItems={cartItems.length}></Header>
 
       <div className="App">
         <div className="app-container">
@@ -102,8 +117,8 @@ function App() {
             tatlilar={tatlilar}
             turkkahveleri={turkkahveleri}
             cartItems={cartItems}
-            />
-          <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
+          />
+          <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
         </div>
       </div>
     </SnackbarProvider>

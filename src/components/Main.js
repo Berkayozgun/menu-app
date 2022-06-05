@@ -126,7 +126,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Ana Yemekler</center>
@@ -135,7 +135,12 @@ export default function Main(props) {
               <div className="row">
                 {anayemekler.map((product) => (
                   <Paper elevation={10}>
-                    <Product className="product-main" key={product.id} product={product} onAdd={onAdd} />
+                    <Product
+                      className="product-main"
+                      key={product.id}
+                      product={product}
+                      onAdd={onAdd}
+                    />
                   </Paper>
                 ))}
               </div>
@@ -149,7 +154,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Atıştırmalıklar</center>
@@ -167,18 +172,17 @@ export default function Main(props) {
 
           <TabPanel name="burgerler" value={value} index={2}>
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Burgerler</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Burgerler</center>
+              </Typography>
+
               <div className="row">
                 {burgerler.map((product) => (
                   <Paper elevation={10}>
@@ -191,18 +195,17 @@ export default function Main(props) {
 
           <TabPanel name="Sıcak İçecekler" value={value} index={3}>
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Çaylar</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Çaylar</center>
+              </Typography>
+
               <div className="row">
                 {caylar.map((product) => (
                   <Paper elevation={10}>
@@ -213,18 +216,17 @@ export default function Main(props) {
             </main>
 
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Türk Kahveleri</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Türk Kahveleri</center>
+              </Typography>
+
               <div className="row">
                 {turkkahveleri.map((product) => (
                   <Paper elevation={10}>
@@ -235,18 +237,17 @@ export default function Main(props) {
             </main>
 
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Espresso</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Espresso</center>
+              </Typography>
+
               <div className="row">
                 {espressolar.map((product) => (
                   <Paper elevation={10}>
@@ -257,18 +258,17 @@ export default function Main(props) {
             </main>
 
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Filtre Kahveler</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Filtre Kahveler</center>
+              </Typography>
+
               <div className="row">
                 {filtrekahveler.map((product) => (
                   <Paper elevation={10}>
@@ -279,18 +279,17 @@ export default function Main(props) {
             </main>
 
             <main className="block col-2">
-              
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Sıcak Sütlü</center>
-                </Typography>
-              
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Sıcak Sütlü</center>
+              </Typography>
+
               <div className="row">
                 {sicakicecekler.map((product) => (
                   <Paper elevation={10}>
@@ -303,18 +302,17 @@ export default function Main(props) {
 
           <TabPanel name="Soğuk İçecekler" value={value} index={4}>
             <main className="block col-2">
-             
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    fontWeight: "bold",
-                    fontSize: "1.5rem",
-                    marginBottom:"1rem",
-                  }}
-                >
-                  <center>Soğuk Kahveler</center>
-                </Typography>
-            
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <center>Soğuk Kahveler</center>
+              </Typography>
+
               <div className="row">
                 {sogukkahveler.map((product) => (
                   <Paper elevation={10}>
@@ -330,7 +328,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Kokteyller</center>
@@ -351,7 +349,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Meşrubat & Milkshake</center>
@@ -373,7 +371,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Kahvaltılıklar</center>
@@ -396,7 +394,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Makarnalar</center>
@@ -419,7 +417,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Salatalar</center>
@@ -442,7 +440,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Sandviçler</center>
@@ -465,7 +463,7 @@ export default function Main(props) {
                   fontFamily: "Ubuntu",
                   fontWeight: "bold",
                   fontSize: "1.5rem",
-                  marginBottom:"1rem",
+                  marginBottom: "1rem",
                 }}
               >
                 <center>Tatlılar</center>
@@ -480,7 +478,6 @@ export default function Main(props) {
               </div>
             </main>
           </TabPanel>
-          
         </Paper>
       </Box>
     </div>

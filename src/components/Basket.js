@@ -36,9 +36,6 @@ export default function Basket(props) {
   };
 
   const theme = createTheme({
-    status: {
-      danger: "#e53e3e",
-    },
     palette: {
       primary: {
         main: "#F62F63",
@@ -83,6 +80,7 @@ export default function Basket(props) {
           </Typography>
         )}
       </div>
+
       {cartItems.map((item) => (
         <Paper
           elevation={10}
@@ -98,7 +96,7 @@ export default function Basket(props) {
                   fontWeight: "bold",
                   fontSize: "13px",
                   color: "#000000",
-                  width:"8rem"
+                  width: "8rem",
                 }}
               >
                 <center>{item.title}</center>
@@ -130,14 +128,17 @@ export default function Basket(props) {
           >
             <div className="basket-row">
               <div className="col-2 sepet-text">
-              <Typography
-                sx={{
-                  fontFamily: "Ubuntu",
-                  fontWeight: "light",
-                  fontSize: "1rem",
-                  color: "#000000",
-                }}
-              >Sepet Tutarı</Typography></div>
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "light",
+                    fontSize: "1rem",
+                    color: "#000000",
+                  }}
+                >
+                  Sepet Tutarı
+                </Typography>
+              </div>
               <div className="col-1 price-text">{itemsPrice.toFixed(2)} TL</div>
             </div>
 
@@ -149,14 +150,18 @@ export default function Basket(props) {
             elevation={0}
           >
             <div className="basket-row">
-              <div className="col-2 sepet-text"><Typography
-                sx={{
-                  fontFamily: "Ubuntu",
-                  fontWeight: "light",
-                  fontSize: "1rem",
-                  color: "#000000",
-                }}
-              >Teslimat Ücreti</Typography></div>
+              <div className="col-2 sepet-text">
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "light",
+                    fontSize: "1rem",
+                    color: "#000000",
+                  }}
+                >
+                  Teslimat Ücreti
+                </Typography>
+              </div>
               <div className="col-1 price-text">
                 {shippingPrice.toFixed(2)} TL
               </div>
@@ -173,7 +178,9 @@ export default function Basket(props) {
               <div className="col-2 sepet-text">
                 <strong>Toplam Tutar</strong>
               </div>
-              <div className="col-1 price-text"><strong>{totalPrice.toFixed(2)} TL</strong></div>
+              <div className="col-1 price-text">
+                <strong>{totalPrice.toFixed(2)} TL</strong>
+              </div>
             </div>
           </Paper>
 
