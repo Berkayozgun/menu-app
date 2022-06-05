@@ -5,46 +5,30 @@ import data from "./menu-data/data";
 import { SnackbarProvider } from "notistack";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-
-
 import { useState, useEffect } from "react";
 
 function App() {
-  const {
-    anayemekler,
-    atistirmaliklar,
-    burgerler,
-    caylar,
-    espressolar,
-    filtrekahveler,
-    kahvaltiliklar,
-    kokteyller,
-    makarnalar,
-    menu,
-    mesrubatlar,
-    salatalar,
-    sandvicler,
-    sicakicecekler,
-    sogukkahveler,
-    tatlilar,
-    turkkahveleri,
-  } = data;
+  const { anayemekler, atistirmaliklar, burgerler, caylar, espressolar, filtrekahveler,
+          kahvaltiliklar, kokteyller, makarnalar, menu, mesrubatlar, salatalar, sandvicler,
+          sicakicecekler, sogukkahveler, tatlilar, turkkahveleri
+
+        } = data;
+
   const [cartItems, setCartItems] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // Wait for 3 seconds
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  useEffect(() => { 
+      setTimeout(() => { 
+        setIsLoading(false)}, 2000); },
+   []);
 
-  const override = `
-    display: block;
-    margin: 0 auto;
-  border-color: red;
-  margin-top: 20%;`;
+  const override = {
+    display:"block",
+    margin:"0 auto",
+    borderColor: "red",
+    marginTop:"20%"
+  };
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -71,20 +55,20 @@ function App() {
       );
     }
   };
+
   return isLoading ? (
-    // If page is still loading then splash screen
     <PacmanLoader
       className="loader"
       color={"#f04040"}
       isLoading={isLoading}
       css={override}
-      size={30}
+      size={35}
+      speedMultiplier={2}
       justifyContent={"center"}
       alignItems={"center"}
       display={"flex"}
-      
     />
-  ) : (
+    ) : (
     <SnackbarProvider
       maxSnack={1}
       anchorOrigin={{
@@ -93,7 +77,7 @@ function App() {
         variant: "success",
       }}
     >
-      <Header className="App-header" countCartItems={cartItems.length}></Header>
+    <Header className="App-header" countCartItems={cartItems.length}></Header>
 
       <div className="App">
         <div className="app-container">
@@ -118,12 +102,8 @@ function App() {
             tatlilar={tatlilar}
             turkkahveleri={turkkahveleri}
             cartItems={cartItems}
-          ></Main>
-          <Basket
-            onAdd={onAdd}
-            onRemove={onRemove}
-            cartItems={cartItems}
-          ></Basket>
+            />
+          <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
         </div>
       </div>
     </SnackbarProvider>

@@ -10,11 +10,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
-import AddIcon from "@mui/icons-material/Add";
-import Fab from "@mui/material/Fab";
-import RemoveIcon from "@mui/icons-material/Remove";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Divider from '@mui/material/Divider';
+import Divider from "@mui/material/Divider";
 
 export default function Basket(props) {
   const [open, setOpen] = React.useState(false);
@@ -27,10 +24,15 @@ export default function Basket(props) {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 400,
-    bgcolor: "background.paper",
+    bgcolor: "#e0e0e0",
+    color: "#000000",
     border: "2px solid #fff",
+    borderRadius: "15rem",
     boxShadow: 24,
     p: 2,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   };
 
   const theme = createTheme({
@@ -53,75 +55,133 @@ export default function Basket(props) {
 
   return (
     <Paper className="basket-body">
-      <h2>
+      <Typography
+        sx={{
+          fontFamily: "Ubuntu",
+          fontWeight: "bold",
+          fontSize: "1.6rem",
+          marginBottom: "1rem",
+          marginTop: "1rem",
+        }}
+      >
         <center>Sepetiniz</center>
-      </h2>
+      </Typography>
+
       <div>
         {cartItems.length === 0 && (
-          <div>Sepetinize henüz ekleme yapmadınız.</div>
+          <Typography
+            sx={{
+              fontFamily: "Ubuntu",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              marginBottom: "1rem",
+              marginTop: "1rem",
+              color: "#ABB8C9",
+            }}
+          >
+            <center>Sepetinize henüz ekleme yapmadınız.</center>
+          </Typography>
         )}
       </div>
       {cartItems.map((item) => (
         <Paper
           elevation={10}
-          sx={{ margin: "10px" , padding: "10px" }}
+          sx={{ margin: "10px", padding: "10px" }}
           key={item.id}
           className="row"
         >
           <div className="col-2">
             <div className="col-2">
-             {item.title}
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "13px",
+                  color: "#000000",
+                  width:"8rem"
+                }}
+              >
+                <center>{item.title}</center>
+              </Typography>
             </div>
           </div>
           <div>
-          
-            <ButtonGroup sx={{marginLeft:"50%"}} variant="outlined" aria-label="outlined button group">
-
-              <Button onClick={() => onRemove(item)} className="remove">-</Button>
+            <ButtonGroup
+              sx={{ marginLeft: "50%" }}
+              variant="outlined"
+              aria-label="outlined button group"
+            >
+              <Button onClick={() => onRemove(item)} className="remove">
+                -
+              </Button>
               <Button className="qty">{item.qty}</Button>
-              <Button onClick={() => onAdd(item)} className="add">+</Button>
-
+              <Button onClick={() => onAdd(item)} className="add">
+                +
+              </Button>
             </ButtonGroup>
-
           </div>
         </Paper>
-        
       ))}
       {cartItems.length !== 0 && (
-        <div sx={{ marginTop:"15rem"}}>
-          
-          <Paper sx={{ marginTop: "3rem" , marginLeft: "1rem", marginBottom:"2rem"}} elevation={0}>
-          <div className="basket-row">
-            <div className="col-2 sepet-text" >Sepet Tutarı</div>
-            <div className="col-1 price-text">{itemsPrice.toFixed(2)} TL</div>
-          </div>
-          
-          <Divider />
-          </Paper>
-
-          <Paper sx={{ marginTop: "2rem" , marginLeft: "1rem" ,marginBottom:"1rem"}} elevation={0}>
-          <div className="basket-row">
-            <div className="col-2 sepet-text" >Teslimat Ücreti</div>
-            <div className="col-1 price-text">{shippingPrice.toFixed(2)} TL</div>
-          </div>
-          </Paper>
-
-          <Divider />
-
-          <Paper sx={{ marginTop: "2rem" , marginLeft: "1rem" ,marginBottom:"1rem"}} elevation={0}>
-          <div className="basket-row">
-            <div className="col-2 sepet-text">
-              <strong>Toplam Tutar</strong>
+        <div sx={{ marginTop: "15rem" }}>
+          <Paper
+            sx={{ marginTop: "3rem", marginLeft: "1rem", marginBottom: "2rem" }}
+            elevation={0}
+          >
+            <div className="basket-row">
+              <div className="col-2 sepet-text">
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "light",
+                  fontSize: "1rem",
+                  color: "#000000",
+                }}
+              >Sepet Tutarı</Typography></div>
+              <div className="col-1 price-text">{itemsPrice.toFixed(2)} TL</div>
             </div>
-            <div className="col-1 price-text">{totalPrice.toFixed(2)} TL</div>
-          </div>
+
+            <Divider />
+          </Paper>
+
+          <Paper
+            sx={{ marginTop: "2rem", marginLeft: "1rem", marginBottom: "1rem" }}
+            elevation={0}
+          >
+            <div className="basket-row">
+              <div className="col-2 sepet-text"><Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "light",
+                  fontSize: "1rem",
+                  color: "#000000",
+                }}
+              >Teslimat Ücreti</Typography></div>
+              <div className="col-1 price-text">
+                {shippingPrice.toFixed(2)} TL
+              </div>
+            </div>
+          </Paper>
+
+          <Divider />
+
+          <Paper
+            sx={{ marginTop: "2rem", marginLeft: "1rem", marginBottom: "1rem" }}
+            elevation={0}
+          >
+            <div className="basket-row">
+              <div className="col-2 sepet-text">
+                <strong>Toplam Tutar</strong>
+              </div>
+              <div className="col-1 price-text"><strong>{totalPrice.toFixed(2)} TL</strong></div>
+            </div>
           </Paper>
 
           <TextField
             label="İsminiz"
             id="outlined-size-small"
             size="small"
-            sx={{ marginTop: "1rem" }}
+            sx={{ margin: "0.5rem" }}
             type="string"
           />
 
@@ -129,7 +189,7 @@ export default function Basket(props) {
             label="E-mail"
             id="outlined-size-small"
             size="small"
-            sx={{ marginTop: "1rem" }}
+            sx={{ margin: "0.5rem" }}
             type="email"
           />
 
@@ -137,18 +197,18 @@ export default function Basket(props) {
             label="Telefon"
             id="outlined-size-small"
             size="small"
-            sx={{ marginTop: "1rem" }}
+            sx={{ margin: "0.5rem" }}
             type="tel"
           />
           <TextField
             label="Adresiniz"
             id="outlined-size-small"
             size="small"
-            sx={{ marginTop: "1rem" }}
+            sx={{ margin: "0.5rem", width: "90%", height: "fit-content" }}
             type="address"
           />
 
-          <Box sx={{ width: "11rem", height: "5rem", marginTop: "1rem" }}>
+          <Box sx={{ width: "11rem", height: "5rem", margin: "0.5rem" }}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">
                 Ödeme Yöntemi

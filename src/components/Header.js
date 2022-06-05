@@ -12,7 +12,7 @@ export default function Header(props) {
   const { countCartItems } = props;
 
   return (
-    <Box className="App-header" sx={{ flexGrow: 1 }}>
+    <Box className="App-header" sx={{ flexGrow: 1 ,}}>
 
       <AppBar position="static" sx={{ backgroundColor:"#8F8AC0", width: "100%"}}>
 
@@ -26,7 +26,7 @@ export default function Header(props) {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+            sx={{ display: "flex", alignItems: "center", justifyContent: "center" , fontFamily: 'Ubuntu', fontSize: '1.5rem', fontWeight: 'bold'}}
           >
            <center>Restoranımıza hoş geldiniz!</center> 
           </Typography>

@@ -6,60 +6,62 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useSnackbar } from "notistack";
-import { createTheme } from '@mui/material/styles';
-
+import { createTheme } from "@mui/material/styles";
 
 export default function Product(props) {
+  
   const { product, onAdd } = props;
 
   const { enqueueSnackbar } = useSnackbar();
 
-  const handleClick = () => {
-    enqueueSnackbar("Sepete Eklendi!");
-  };
+  const handleClick = () => { enqueueSnackbar("Sepete Eklendi!"); };
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const theme = createTheme({
-    status: {
-      danger: '#e53e3e',
-    },
     palette: {
       primary: {
-        main: '#F62F63',
-        darker: '#053e85',
+        main: "#F62F63",
       },
     },
   });
 
   return (
+    
     <Card className="product-card">
-      <CardMedia
-        component="img"
-        height="150"
-        image={product.image}
-        alt="{product.title}"
-      />
+
+      <CardMedia component="img" height="150" image={product.image} alt="{product.title}"/>
+
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+
+        <Typography gutterBottom variant="h6" component="div" sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.2rem",
+                }}>
           {product.title}
-          {product.categoryName}
         </Typography>
+
       </CardContent>
+
+
       <CardActions>
         <React.Fragment>
-          
-          <Button theme={theme} color="primary" variant="contained"
-            onClick={() => {
-              onAdd(product);
-              handleClick();
-            }}
-          >
-            Sepete Ekle
+
+          <Button theme={theme} color="primary" variant="contained" sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "0.9rem",
+                }}
+                  onClick={() => { 
+                                    onAdd(product);
+                                    handleClick();  
+                                  }}>
+                     Sepete Ekle
           </Button>
-         
-          </React.Fragment>
+          
+        </React.Fragment>
       </CardActions>
     </Card>
   );

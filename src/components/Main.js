@@ -9,16 +9,13 @@ import Product from "./Product";
 import "../index.css";
 import { useSnackbar } from "notistack";
 
-
-
 const tabStyle = {
-  fontSize: "12px",
+  fontSize: "13px",
   textAlign: "center",
   fontWeight: "bold",
   color: "white",
+  fontFamily: "Ubuntu",
 };
-
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,10 +57,7 @@ export default function Main(props) {
     setValue(newValue);
   };
 
- 
-
-  const { enqueueSnackbar } = useSnackbar(
-  );
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleClick = () => {
     enqueueSnackbar("Sepete Eklendi!");
@@ -93,24 +87,23 @@ export default function Main(props) {
   return (
     <div className="flex-container">
       <Box sx={{ width: "100%" }}>
-        <Box
-          className="flex-container-child-1"
-          sx={{  }}
-        >
+        <Box className="flex-container-child-1" sx={{}}>
           <Tabs
             variant="fullWidth"
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
-            style={{ fontWeight: "bold",
-                    backgroundColor: "#F62F63",
-                    marginTop: "1rem", 
-                    borderRadius: "3rem",
-                    width:"137%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center",}}
-           indicatorColor="white"
+            style={{
+              fontWeight: "bold",
+              backgroundColor: "#F62F63",
+              marginTop: "1rem",
+              borderRadius: "3rem",
+              width: "137%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            indicatorColor="white"
           >
             <Tab label="Ana Yemek" {...a11yProps(0)} style={tabStyle} />
             <Tab label="Atıştırmalık" {...a11yProps(1)} style={tabStyle} />
@@ -126,23 +119,23 @@ export default function Main(props) {
         </Box>
 
         <Paper className="block col-2 main-menu">
-          
           <TabPanel name="anayemekler" value={value} index={0}>
-          
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Ana Yemekler</center>
-              </h2>
-              
+              </Typography>
+
               <div className="row">
-                
                 {anayemekler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product className="product-main" key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -151,36 +144,45 @@ export default function Main(props) {
 
           <TabPanel name="atistirmaliklar" value={value} index={1}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Atıştırmalıklar</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {atistirmaliklar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
           </TabPanel>
 
-          <TabPanel name="Burgerler" value={value} index={2}>
+          <TabPanel name="burgerler" value={value} index={2}>
             <main className="block col-2">
-              <h2>
-                <center>Burgerler</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Burgerler</center>
+                </Typography>
+              
               <div className="row">
                 {burgerler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -189,85 +191,110 @@ export default function Main(props) {
 
           <TabPanel name="Sıcak İçecekler" value={value} index={3}>
             <main className="block col-2">
-              <h2>
-                <center>Çaylar</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Çaylar</center>
+                </Typography>
+              
               <div className="row">
                 {caylar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
-              <h2>
-                <center>Türk Kahveleri</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Türk Kahveleri</center>
+                </Typography>
+              
               <div className="row">
                 {turkkahveleri.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
-              <h2>
-                <center>Espresso</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Espresso</center>
+                </Typography>
+              
               <div className="row">
                 {espressolar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
-              <h2>
-                <center>Filtre Kahveler</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Filtre Kahveler</center>
+                </Typography>
+              
               <div className="row">
                 {filtrekahveler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
-              <h2>
-                <center>Sıcak Sütlü</center>
-              </h2>
+              
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Sıcak Sütlü</center>
+                </Typography>
+              
               <div className="row">
                 {sicakicecekler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -276,46 +303,63 @@ export default function Main(props) {
 
           <TabPanel name="Soğuk İçecekler" value={value} index={4}>
             <main className="block col-2">
-              <h2>
-                <center>Soğuk Kahveler</center>
-              </h2>
+             
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                    fontWeight: "bold",
+                    fontSize: "1.5rem",
+                    marginBottom:"1rem",
+                  }}
+                >
+                  <center>Soğuk Kahveler</center>
+                </Typography>
+            
               <div className="row">
                 {sogukkahveler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
-              <h2>Kokteyller</h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
+                <center>Kokteyller</center>
+              </Typography>
+
               <div className="row">
                 {kokteyller.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
 
             <main className="block col-2">
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
+                <center>Meşrubat & Milkshake</center>
+              </Typography>
               <div className="row">
                 {mesrubatlar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -324,17 +368,21 @@ export default function Main(props) {
 
           <TabPanel name="Kahvaltılıklar" value={value} index={5}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Kahvaltılıklar</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {kahvaltiliklar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -343,17 +391,21 @@ export default function Main(props) {
 
           <TabPanel name="Makarnalar" value={value} index={6}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Makarnalar</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {makarnalar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -362,17 +414,21 @@ export default function Main(props) {
 
           <TabPanel name="Salatalar" value={value} index={7}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Salatalar</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {salatalar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -381,17 +437,21 @@ export default function Main(props) {
 
           <TabPanel name="Sandviçler" value={value} index={8}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Sandviçler</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {sandvicler.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
@@ -400,22 +460,27 @@ export default function Main(props) {
 
           <TabPanel name="Tatlılar" value={value} index={9}>
             <main className="block col-2">
-              <h2>
+              <Typography
+                sx={{
+                  fontFamily: "Ubuntu",
+                  fontWeight: "bold",
+                  fontSize: "1.5rem",
+                  marginBottom:"1rem",
+                }}
+              >
                 <center>Tatlılar</center>
-              </h2>
+              </Typography>
+
               <div className="row">
                 {tatlilar.map((product) => (
-                  <Paper elevation={10} >
-                  <Product
-                    key={product.id}
-                    product={product}
-                    onAdd={onAdd}
-                  />
+                  <Paper elevation={10}>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                   </Paper>
                 ))}
               </div>
             </main>
           </TabPanel>
+          
         </Paper>
       </Box>
     </div>
