@@ -18,6 +18,7 @@ const tabStyle = {
 };
 
 function TabPanel(props) {
+
   const { children, value, index, ...other } = props;
 
   return (
@@ -44,6 +45,7 @@ TabPanel.propTypes = {
 };
 
 function a11yProps(index) {
+
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -51,17 +53,18 @@ function a11yProps(index) {
 }
 
 export default function Main(props) {
+
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event, newValue) => { 
     setValue(newValue);
-  };
+   };
 
   const { enqueueSnackbar } = useSnackbar();
 
   const handleClick = () => {
-    enqueueSnackbar("Sepete Eklendi!");
-  };
+     enqueueSnackbar("Sepete Eklendi!") 
+    };
 
   const {
     anayemekler,

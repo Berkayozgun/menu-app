@@ -14,6 +14,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Divider from "@mui/material/Divider";
 
 export default function Basket(props) {
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -38,8 +39,7 @@ export default function Basket(props) {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#F62F63",
-        darker: "#053e85",
+        main: "#F62F63"
       },
     },
   });
@@ -59,8 +59,7 @@ export default function Basket(props) {
           fontSize: "1.6rem",
           marginBottom: "1rem",
           marginTop: "1rem",
-        }}
-      >
+        }}>
         <center>Sepetiniz</center>
       </Typography>
 
@@ -74,8 +73,7 @@ export default function Basket(props) {
               marginBottom: "1rem",
               marginTop: "1rem",
               color: "#ABB8C9",
-            }}
-          >
+            }}>
             <center>Sepetinize henüz ekleme yapmadınız.</center>
           </Typography>
         )}
@@ -97,8 +95,7 @@ export default function Basket(props) {
                   fontSize: "13px",
                   color: "#000000",
                   width: "8rem",
-                }}
-              >
+                }}>
                 <center>{item.title}</center>
               </Typography>
             </div>
@@ -113,6 +110,7 @@ export default function Basket(props) {
                 -
               </Button>
               <Button className="qty">{item.qty}</Button>
+              
               <Button onClick={() => onAdd(item)} className="add">
                 +
               </Button>
@@ -120,6 +118,7 @@ export default function Basket(props) {
           </div>
         </Paper>
       ))}
+
       {cartItems.length !== 0 && (
         <div sx={{ marginTop: "15rem" }}>
           <Paper
@@ -134,8 +133,7 @@ export default function Basket(props) {
                     fontWeight: "light",
                     fontSize: "1rem",
                     color: "#000000",
-                  }}
-                >
+                  }}>
                   Sepet Tutarı
                 </Typography>
               </div>
@@ -143,7 +141,9 @@ export default function Basket(props) {
             </div>
 
             <Divider />
+
           </Paper>
+
 
           <Paper
             sx={{ marginTop: "2rem", marginLeft: "1rem", marginBottom: "1rem" }}
@@ -157,11 +157,11 @@ export default function Basket(props) {
                     fontWeight: "light",
                     fontSize: "1rem",
                     color: "#000000",
-                  }}
-                >
+                  }}>
                   Teslimat Ücreti
                 </Typography>
               </div>
+
               <div className="col-1 price-text">
                 {shippingPrice.toFixed(2)} TL
               </div>
@@ -175,12 +175,15 @@ export default function Basket(props) {
             elevation={0}
           >
             <div className="basket-row">
+
               <div className="col-2 sepet-text">
                 <strong>Toplam Tutar</strong>
               </div>
+
               <div className="col-1 price-text">
                 <strong>{totalPrice.toFixed(2)} TL</strong>
               </div>
+
             </div>
           </Paper>
 
@@ -217,6 +220,7 @@ export default function Basket(props) {
 
           <Box sx={{ width: "11rem", height: "5rem", margin: "0.5rem" }}>
             <FormControl fullWidth>
+              
               <InputLabel id="demo-simple-select-label">
                 Ödeme Yöntemi
               </InputLabel>
@@ -244,8 +248,7 @@ export default function Basket(props) {
                   setOpen(true);
                 }
                 window.location.href = "/";
-              }}
-            >
+              }}>
               Siparişi tamamla
             </Button>
             <Modal
