@@ -4,7 +4,6 @@ import Basket from "./components/Basket";
 import data from "./menu-data/data";
 import { SnackbarProvider } from "notistack";
 import PacmanLoader from "react-spinners/PacmanLoader";
-
 import { useState, useEffect } from "react";
 
 function App() {

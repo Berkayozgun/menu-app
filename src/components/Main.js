@@ -68,7 +68,6 @@ export default function Main(props) {
 
   const {
     anayemekler,
-    data,
     atistirmaliklar,
     burgerler,
     caylar,
@@ -106,7 +105,7 @@ export default function Main(props) {
               justifyContent: "center",
               alignItems: "center",
             }}
-            indicatorColor="white"
+          
           >
             <Tab label="Ana Yemek" {...a11yProps(0)} style={tabStyle} />
             <Tab label="Atıştırmalık" {...a11yProps(1)} style={tabStyle} />

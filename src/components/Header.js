@@ -9,7 +9,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import HomeIcon from "@mui/icons-material/Home";
 
 export default function Header(props) {
-
   const { countCartItems } = props;
 
   return (
@@ -23,14 +22,16 @@ export default function Header(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-          }}>
+          }}
+        >
           <IconButton
             size="large"
             color="inherit"
             href="/"
-            sx={{ 
-              justifyContent: "flex-start" 
-            }}>
+            sx={{
+              justifyContent: "flex-start",
+            }}
+          >
             <HomeIcon />
           </IconButton>
 
@@ -45,7 +46,8 @@ export default function Header(props) {
               fontFamily: "Ubuntu",
               fontSize: "1.5rem",
               fontWeight: "bold",
-            }}>
+            }}
+          >
             <center>Restoranımıza hoş geldiniz!</center>
           </Typography>
 
@@ -57,7 +59,7 @@ export default function Header(props) {
             </IconButton>
           </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" } }}/>
+          <Box sx={{ display: { xs: "flex", md: "none" } }} />
         </Toolbar>
       </AppBar>
     </Box>
