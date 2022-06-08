@@ -27,24 +27,24 @@ function App() {
     turkkahveleri,
   } = data;
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);                           /* sepet state'i */
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);                      /* loading state'i */                        
 
-  useEffect(() => {
+  useEffect(() => {                                                       /* splash screen için zaman düzenlemesi*/
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
 
-  const override = {
+  const override = {                                        /* splash screen için style düzenlemesi*/
     display: "block",
     margin: "0 auto",
     borderColor: "red",
     marginTop: "20%",
   };
 
-  const onAdd = (product) => {
+  const onAdd = (product) => {                                                            /* sepete ekleme işlemi */
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
@@ -57,7 +57,7 @@ function App() {
     }
   };
 
-  const onRemove = (product) => {
+  const onRemove = (product) => {                                                         /* sepetten çıkarma işlemi */
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
@@ -70,7 +70,7 @@ function App() {
     }
   };
 
-  return isLoading ? (
+  return isLoading ? (                                                              /* splash screen yüklenir eğer loading state'i tetiklenirse*/
     <PacmanLoader
       className="loader"
       color={"#f04040"}
@@ -83,7 +83,7 @@ function App() {
       display={"flex"}
     />
   ) : (
-    <SnackbarProvider
+    <SnackbarProvider                                         /* splash screen sonrası render edilen componentler */
       maxSnack={1}
       anchorOrigin={{
         vertical: "bottom",

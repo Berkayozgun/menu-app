@@ -7,9 +7,8 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Product from "./Product";
 import "../index.css";
-import { useSnackbar } from "notistack";
 
-const tabStyle = {
+const tabStyle = {                                                                                    /* Tab styling */
   fontSize: "13px",
   textAlign: "center",
   fontWeight: "bold",
@@ -18,11 +17,10 @@ const tabStyle = {
 };
 
 function TabPanel(props) {
-
   const { children, value, index, ...other } = props;
 
   return (
-    <div
+    <div                                                                                              /* Tab sekmeleri */
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -45,7 +43,6 @@ TabPanel.propTypes = {
 };
 
 function a11yProps(index) {
-
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -53,18 +50,11 @@ function a11yProps(index) {
 }
 
 export default function Main(props) {
+  const [value, setValue] = React.useState(0);                                  /* Tablara tıklandıktan sonra value ile render */
 
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => { 
+  const handleChange = (event, newValue) => {
     setValue(newValue);
-   };
-
-  const { enqueueSnackbar } = useSnackbar();
-
-  const handleClick = () => {
-     enqueueSnackbar("Sepete Eklendi!") 
-    };
+  };
 
   const {
     anayemekler,
@@ -105,7 +95,6 @@ export default function Main(props) {
               justifyContent: "center",
               alignItems: "center",
             }}
-          
           >
             <Tab label="Ana Yemek" {...a11yProps(0)} style={tabStyle} />
             <Tab label="Atıştırmalık" {...a11yProps(1)} style={tabStyle} />

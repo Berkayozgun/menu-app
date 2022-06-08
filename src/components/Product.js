@@ -13,13 +13,10 @@ export default function Product(props) {
 
   const { enqueueSnackbar } = useSnackbar();
 
-  const handleClick = () => {
+  const handleClick = () => {                                   /* Sepete ekleme işleminden sonra popup notification */
     enqueueSnackbar("Sepete Eklendi!");
   };
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
   const theme = createTheme({
     palette: {
       primary: {
@@ -54,7 +51,7 @@ export default function Product(props) {
 
       <CardActions>
         <React.Fragment>
-          <Button
+          <Button 
             theme={theme}
             color="primary"
             variant="contained"

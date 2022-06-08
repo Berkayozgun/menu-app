@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -13,32 +13,31 @@ import Paper from "@mui/material/Paper";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Divider from "@mui/material/Divider";
 import emailjs from "@emailjs/browser";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 export default function Basket(props) {
-  const sendEmail = (e) => {
+
+                                                                                         /* E-mail gönderme */
+
+  const sendEmail = (e) => {        
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "gmail",
-        "template_dah8wml",
-        e.target,
-        "user_UaagZiVf2vgNi3oJnCr1V"
-      )
-      .then(
+    emailjs.sendForm( "gmail", "template_dah8wml", e.target, "user_UaagZiVf2vgNi3oJnCr1V").then (
         (result) => {
           console.log(result.text);
         },
-        (error) => {
+        (error) => {                                                            
           console.log(error.text);
         }
       );
   };
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);   
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
+
+                                                                              /* Siparişi tamamla sonrası açılan modal'ın styleı*/
 
   const style = {
     position: "absolute",
@@ -55,8 +54,10 @@ export default function Basket(props) {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    display: "grid",
   };
+
+
+                                                                              /* Siparişi tamamla butonunun style'ı*/
 
   const theme = createTheme({
     palette: {
@@ -68,12 +69,12 @@ export default function Basket(props) {
 
   const { cartItems, onAdd, onRemove } = props;
 
-  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-  const shippingPrice = itemsPrice > 50 ? 0 : 4.99;
-  const totalPrice = itemsPrice + shippingPrice;
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);                 /* Ürünlerin fiyatları toplamı */
+  const shippingPrice = itemsPrice > 50 ? 0 : 4.99;                                      /* Ürünlerin fiyatı 50 TL'den büyükse kargo ücreti 0 */
+  const totalPrice = itemsPrice + shippingPrice;                                         /* Ürünlerin fiyatı ve kargo ücreti toplamı */
 
   return (
-    <form onSubmit={sendEmail}>
+    <form onSubmit={sendEmail}> 
       <Paper className="basket-body">
         <Typography
           sx={{
@@ -88,7 +89,7 @@ export default function Basket(props) {
         </Typography>
 
         <div>
-          {cartItems.length === 0 && (
+          {cartItems.length === 0 && (                                                      /* Sepetiniz boşsa */
             <Typography
               sx={{
                 fontFamily: "Ubuntu",
@@ -104,7 +105,7 @@ export default function Basket(props) {
           )}
         </div>
 
-        {cartItems.map((item) => (
+        {cartItems.map((item) => (                                                         /* Sepetinizdeki ürünler */
           <Paper
             elevation={10}
             sx={{ margin: "10px", padding: "10px" }}
@@ -130,14 +131,15 @@ export default function Basket(props) {
               <ButtonGroup
                 sx={{ marginLeft: "50%" }}
                 variant="outlined"
-                aria-label="outlined button group"
+                aria-label="outlined button group"                                     /* Sepete ürün ekleme silme */
               >
-                <Button onClick={() => onRemove(item)} className="remove">
+                <Button onClick={() => onRemove(item)} className="remove">               
                   -
                 </Button>
+
                 <Button className="qty">{item.qty}</Button>
 
-                <Button onClick={() => onAdd(item)} className="add">
+                <Button onClick={() => onAdd(item)} className="add">                
                   +
                 </Button>
               </ButtonGroup>
@@ -145,7 +147,7 @@ export default function Basket(props) {
           </Paper>
         ))}
 
-        {cartItems.length !== 0 && (
+        {cartItems.length !== 0 && (                                              /* Sepetiniz boş değilse fiyatlandırma*/
           <div sx={{ marginTop: "15rem" }}>
             <Paper
               sx={{
@@ -225,7 +227,7 @@ export default function Basket(props) {
               </div>
             </Paper>
 
-            <TextField
+            <TextField                                                  /* Sipariş teslimatı için form*/
               value={totalPrice.toFixed(2)}
               name="total_price"
               sx={{ display: "none" }}
@@ -266,14 +268,14 @@ export default function Basket(props) {
               name="from_address"
             ></TextField>
 
-            <FormControl
+            <FormControl                                                                  /* Siparişin ödeme yöntemi*/
               fullWidth
               sx={{ width: "11rem", height: "5rem", margin: "0.5rem" }}
             >
               <InputLabel id="demo-simple-select-label">
                 Ödeme Yöntemi
               </InputLabel>
-              <Select
+              <Select 
                 sx={{ height: "3rem" }}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
@@ -282,10 +284,11 @@ export default function Basket(props) {
                 <MenuItem value={10}>Nakit</MenuItem>
                 <MenuItem value={20}>Kredi/Banka Kartı</MenuItem>
                 <MenuItem value={30}>Yemek Kartı</MenuItem>
+               
               </Select>
             </FormControl>
 
-            <Button
+            <Button                                                                     /* Siparişi gönderme butonu*/
               type="submit"
               theme={theme}
               variant="contained"
@@ -299,9 +302,9 @@ export default function Basket(props) {
               Siparişi Onayla
             </Button>
 
-            <div className="row">
+            <div className="row">                                             
               <Modal
-                open={open}
+                open={open}                                                          /* Sipariş onayından sonraki modal*/
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
@@ -315,7 +318,7 @@ export default function Basket(props) {
                     <center> Siparişiniz verildi!</center>
                   </Typography>
 
-                  <Button
+                  <Button                                                   /* Sipariş onayından sonraki modal içerisindeki buton*/
                     className="modal"
                     href="/"
                     sx={{

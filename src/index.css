@@ -70,32 +70,11 @@ div {
   flex: 2;
 }
 
-.row.center {
-  align-items: center;
-}
-
-img.small {
-  height: 8;
-  width: 100%;
-  border-radius: 1.5rem;
-  width: 12rem;
-}
-
-.send-button {
-  background-color: #F62F63;
-  border: none;
-  color: #ffffff;
-  width: 1.5rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  border-radius: 0.5rem;
-}
-
 button.add {
   background-color: #5d3ebc;
   width: 1.5rem;
   color: #fff;
-  fontweight: bold;
+  font-weight: bold;
 }
 
 button.add:hover {
@@ -113,64 +92,8 @@ button.remove:hover {
   background-color: #af3a2b;
 }
 
-button.badge {
-  background-color: #f04040;
-  border: none;
-  color: #ffffff;
-  width: 1.5rem;
-}
-
 button.qty {
   color: #000000;
-}
-
-text-right {
-  text-align: right;
-}
-
-.about-text {
-  font-size: 0.8rem;
-  margin: 0.5rem;
-}
-
-.main-header {
-  background-color: #d2d2d2;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.header-cart {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 10rem;
-}
-
-.add-button {
-  margin-top: 1rem;
-}
-
-.Card {
-  margin-left: 0.3rem;
-}
-
-.main-tab {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  width: 70%;
 }
 
 .app-container {
